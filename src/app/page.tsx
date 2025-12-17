@@ -1,11 +1,5 @@
-import { Button } from "@/components/shadcnui/button";
-import {
-	Card,
-	CardContent,
-	CardHeader,
-	CardTitle,
-} from "@/components/shadcnui/card";
-import { CircleMinus, CirclePlus } from "lucide-react";
+import BasicCounter from "@/components/BasicCounter";
+import { Card, CardHeader, CardTitle } from "@/components/shadcnui/card";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -23,17 +17,7 @@ const page = () => {
 					</CardTitle>
 				</CardHeader>
 
-				<CardContent className="text-center">
-					<div className="pb-4">Counter Value: 0</div>
-					<div className="grid grid-cols-2 gap-4 pt-4">
-						<Button variant={"destructive"}>
-							<CircleMinus /> Minus
-						</Button>
-						<Button variant={"outline"}>
-							<CirclePlus /> Plus
-						</Button>
-					</div>
-				</CardContent>
+				<BasicCounter />
 			</Card>
 		</section>
 	);
